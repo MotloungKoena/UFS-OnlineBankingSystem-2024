@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="@color/light_background"
+    tools:context=".user.UpdateProfile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/card_backgroundd"
+        android:elevation="4dp"
+        android:layout_gravity="center"
+        android:paddingHorizontal="24dp">
+
+        <!-- ImageView on top of the card -->
+        <ImageView
+            android:id="@+id/imgUserProfile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/user_image"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="User Profile Image" />
+
+        <!-- User Info Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Information"
+            android:textColor="@color/primary_text"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- First Name -->
+        <TextView
+            android:id="@+id/labelFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First Name"
+            android:textColor="@color/secondary_text"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/txtFirstNameUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Koena"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Last Name -->
+        <TextView
+            android:id="@+id/labelLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Name"
+            android:textColor="@color/secondary_text"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/txtLastNameUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Motloung"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Student Number -->
+        <TextView
+            android:id="@+id/labelStudentEmployeeNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student/Staff Number"
+            android:textColor="@color/secondary_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtStudentNumberUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1234567899"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Email -->
+        <TextView
+            android:id="@+id/labelEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="@color/secondary_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtEmailUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="johndoe@email.com"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Account Number -->
+        <TextView
+            android:id="@+id/labelAccountNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account Number"
+            android:textColor="@color/secondary_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtAccountNumberUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1234567890"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Username -->
+        <TextView
+            android:id="@+id/labelPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:textColor="@color/secondary_text"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/txtPhoneNumberUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            android:hint="Enter your phone number"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"
+            android:layout_marginBottom="12dp" />
+        <!-- Save Changes Button -->
+        <Button
+            android:id="@+id/buttonSaveChangesUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Changes"
+            android:textColor="#03A9F4"
+            android:background="@drawable/rounded_button_background"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-medium"
+            android:elevation="4dp"/>
+
+    </LinearLayout>
+</ScrollView>

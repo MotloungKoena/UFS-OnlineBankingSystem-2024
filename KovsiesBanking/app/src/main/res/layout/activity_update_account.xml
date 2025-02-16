@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5"
+    tools:context=".admin.ChangePassword">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update User Account"
+        android:textAllCaps="true"
+        android:textSize="25sp"
+    android:textStyle="bold"
+    android:textColor="#FFFFFF"
+    android:padding="16dp"
+    android:background="@drawable/gradient_title_background"
+    android:elevation="4dp"
+    android:layout_marginTop="24dp"
+    android:layout_marginBottom="8dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Subtitle: Instructional Message -->
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Valid Bank Account To Update"
+        android:textAllCaps="false"
+    android:textColor="#FFA500"
+    android:textSize="16sp"
+    android:textStyle="italic"
+    android:padding="12dp"
+    android:background="@drawable/rounded_border_background"
+    android:elevation="2dp"
+    android:layout_marginTop="8dp"
+    app:layout_constraintTop_toBottomOf="@id/title"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+<EditText
+android:id="@+id/txtBankAcc"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:hint="Enter Bank Account"
+android:inputType="number"
+android:padding="12dp"
+android:backgroundTint="#BDBDBD"
+    android:textColor="#000000"
+    app:layout_constraintTop_toBottomOf="@id/subtitle"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintWidth_percent="0.9"
+    android:layout_marginTop="24dp" />
+
+
+<Button
+android:id="@+id/findBankAcc"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:text="Find Bank Account"
+android:textColor="#FFFFFF"
+android:backgroundTint="#1976D2"
+    android:layout_marginTop="24dp"
+    app:layout_constraintTop_toBottomOf="@id/txtBankAcc"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintWidth_percent="0.7" />
+
+
+<EditText
+android:id="@+id/fname"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:hint="First Name"
+android:padding="12dp"
+android:backgroundTint="#BDBDBD"
+    android:textColor="#000000"
+    android:visibility="gone"
+    app:layout_constraintTop_toBottomOf="@id/findBankAcc"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintWidth_percent="0.9"
+    android:layout_marginTop="24dp" />
+
+
+<EditText
+android:id="@+id/lname"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:hint="Last Name"
+android:padding="12dp"
+android:backgroundTint="#BDBDBD"
+    android:textColor="#000000"
+    android:visibility="gone"
+    app:layout_constraintTop_toBottomOf="@id/fname"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintWidth_percent="0.9"
+    android:layout_marginTop="16dp" />
+
+ <EditText
+android:id="@+id/phoneno"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:hint="Phone Number"
+android:padding="12dp"
+android:backgroundTint="#BDBDBD"
+android:textColor="#000000"
+android:visibility="gone"
+    app:layout_constraintTop_toBottomOf="@id/lname"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintWidth_percent="0.9"
+    android:layout_marginTop="16dp" />
+
+<Button
+android:id="@+id/btnSave"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:text="Save Changes"
+android:textColor="#FFFFFF"
+android:backgroundTint="#388E3C"
+    android:visibility="gone"
+    app:layout_constraintTop_toBottomOf="@id/phoneno"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintWidth_percent="0.7"
+    android:layout_marginTop="36dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,71 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.ViewAllUsers">
+
+    <TextView
+        android:id="@+id/textViewViewUsers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="Manage User Accounts"
+        android:textAllCaps="false"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#4CAF50"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/all_users"
+        app:layout_constraintTop_toBottomOf="@id/textViewViewUsers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="All users"/>
+
+    <TextView
+        android:id="@+id/textViewViewUsers2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Browse all users, press and hold to delete."
+        android:textAllCaps="false"
+        android:textColor="#3F51B5"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:fontFamily="sans-serif-light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+    <ListView
+        android:id="@+id/listViewUsers"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewViewUsers2"
+        app:layout_constraintBottom_toTopOf="@id/buttonGoBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonGoBack"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:padding="8dp"
+        android:text="Go back"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/listViewUsers" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

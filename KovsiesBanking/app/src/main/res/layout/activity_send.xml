@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FAFAFA"
+    tools:context=".user.SendMoneyActivity">
+
+    <!-- Header Section -->
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Money"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#37474F"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Image for visual aid -->
+    <ImageView
+        android:id="@+id/student_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@mipmap/send_money"
+        app:layout_constraintTop_toBottomOf="@id/tv_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Sender Bank Account Number -->
+    <EditText
+        android:id="@+id/et_sender_account"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Sender Account Number"
+        android:enabled="false"
+        android:backgroundTint="#0288D1"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/student_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Receiver Bank Account Number -->
+    <EditText
+        android:id="@+id/et_receiver_account"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Receiver Account Number"
+        android:backgroundTint="#0288D1"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/et_sender_account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- Amount Input -->
+    <EditText
+        android:id="@+id/et_amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Amount"
+        android:inputType="numberDecimal"
+        android:backgroundTint="#0288D1"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/et_receiver_account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- Available Balance Label -->
+    <EditText
+        android:id="@+id/et_available_balance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Available Balance"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_background"
+        android:textColor="#000000"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/et_amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- Transfer Button -->
+    <Button
+        android:id="@+id/btn_transfer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Transfer"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#0288D1"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/et_available_balance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Go Back Button -->
+    <Button
+        android:id="@+id/btn_go_back"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Go Back"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#D32F2F"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_transfer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

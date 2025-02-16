@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+     >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center">
+
+        <!-- Review Title -->
+        <TextView
+            android:id="@+id/tv_review_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share Your Experience"
+            android:textSize="28sp"
+
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp" />
+
+        <!-- First Name Input -->
+        <TextView
+            android:id="@+id/tv_first_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First Name"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_first_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your first name"
+            android:inputType="textPersonName"
+            android:background="@drawable/input_background"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Last Name Input -->
+        <TextView
+            android:id="@+id/tv_last_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Name"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_last_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your last name"
+            android:inputType="textPersonName"
+            android:background="@drawable/input_background"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Email Input -->
+        <TextView
+            android:id="@+id/tv_email_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email Address"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your email address"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/input_background"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Feedback Input -->
+        <TextView
+            android:id="@+id/tv_feedback_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Feedback"
+            android:textColor="#000000"
+             android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your feedback here..."
+            android:inputType="textMultiLine"
+            android:minLines="4"
+            android:background="@drawable/input_background"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Rating Input -->
+        <TextView
+            android:id="@+id/tv_rate_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rate Us (1-5)"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stepSize="1"
+            android:numStars="5"
+            android:rating="0"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit Feedback"
+            android:background="@drawable/button_primaryy"
+            android:textColor="@android:color/white"
+            android:padding="12dp"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:id="@+id/btn_go_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back to Home"
+            android:textColor="@color/accent"
+            android:backgroundTint="@android:color/white"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+</ScrollView>

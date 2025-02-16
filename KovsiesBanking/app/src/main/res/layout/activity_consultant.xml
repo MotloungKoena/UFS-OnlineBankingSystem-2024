@@ -1,0 +1,150 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".admin.Consultants">
+
+    <!-- Top Image Header with Overlay Effect -->
+    <FrameLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/consultation"
+            android:contentDescription="Consulting Image"/>
+
+        <!-- Overlay for a darker header with transparency -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000"/>
+    </FrameLayout>
+
+    <!-- Title with Padding -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Welcome, Advisor!"
+        android:textAllCaps="true"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <!-- Modern Grid Buttons with Material Design -->
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        tools:ignore="MissingClass"
+        app:columnCount="2">
+
+        <!-- Account Management Section -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonAddAccount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Add Bank Account"
+            android:backgroundTint="@color/colorAccent"
+            app:cornerRadius="16dp"
+            app:icon="@drawable/bank_acc"
+            app:iconTint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:fontFamily="sans-serif-medium"
+            app:layout_columnWeight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonUpdateAccount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Update Bank Account"
+            android:backgroundTint="@color/colorPrimaryDark"
+            app:cornerRadius="16dp"
+            app:icon="@drawable/update"
+            app:iconTint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:fontFamily="sans-serif-medium"
+            app:layout_columnWeight="1" />
+
+        <!-- User and Login Management Section -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonViewUsers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="View or Delete Users"
+            android:backgroundTint="@color/colorPrimary"
+            app:cornerRadius="16dp"
+            app:icon="@drawable/all_users"
+            app:iconTint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:fontFamily="sans-serif-medium"
+            app:layout_columnWeight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonLogins"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="View Login Sessions"
+            android:backgroundTint="@color/colorAccent"
+            app:cornerRadius="16dp"
+            app:icon="@drawable/sessions"
+            app:iconTint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:fontFamily="sans-serif-medium"
+            app:layout_columnWeight="1" />
+
+        <!-- Extra/Upcoming Feature Section -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonChangePassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Change Password"
+            android:backgroundTint="@color/colorPrimary"
+            app:cornerRadius="16dp"
+            app:icon="@drawable/ic_password"
+            app:iconTint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:fontFamily="sans-serif-medium"
+            app:layout_columnWeight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonComingSoon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Coming Soon"
+            android:backgroundTint="@color/colorPrimaryDark"
+            app:cornerRadius="16dp"
+            app:icon="@drawable/notification_pic"
+            app:iconTint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:fontFamily="sans-serif-medium"
+            app:layout_columnWeight="1" />
+    </androidx.gridlayout.widget.GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

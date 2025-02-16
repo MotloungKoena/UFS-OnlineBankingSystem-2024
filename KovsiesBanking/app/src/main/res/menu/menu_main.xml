@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Check Login Sessions item -->
+
+
+    <item
+        android:id="@+id/update_password"
+        android:title="Update password"
+        android:icon="@drawable/logout"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_submit_review"
+        android:title="Submit review"
+        android:icon="@drawable/sessions"
+        app:showAsAction="never" />
+    <!-- Logout item -->
+    <item
+        android:id="@+id/action_logout"
+        android:title="Logout"
+        android:icon="@drawable/logout"
+        app:showAsAction="never" />
+
+
+
+</menu>

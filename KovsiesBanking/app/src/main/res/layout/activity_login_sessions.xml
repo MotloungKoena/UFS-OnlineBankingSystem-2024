@@ -1,0 +1,59 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.LoginSessions">
+
+    <TextView
+        android:id="@+id/textViewViewUsers1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Login Session History"
+    android:textAllCaps="false"
+    android:textSize="30sp"
+    android:textStyle="bold"
+    android:textColor="#1E88E5"
+    android:fontFamily="sans-serif-medium"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewViewUsers3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Review all user login activities"
+    android:textAllCaps="false"
+    android:textColor="#FF5722"
+    android:textSize="14sp"
+    android:textStyle="italic"
+    android:fontFamily="sans-serif-light"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textViewViewUsers1" />
+
+
+    <ListView
+        android:id="@+id/listViewUsers2"
+        android:layout_width="412dp"
+        android:layout_height="541dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewViewUsers3" />
+
+    <Button
+        android:id="@+id/buttonGoBack2"
+        android:layout_width="311dp"
+        android:layout_height="50dp"
+        android:padding="8px"
+        android:text="Go back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listViewUsers2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

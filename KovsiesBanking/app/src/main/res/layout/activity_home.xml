@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBackgroundColor">
+
+    <!-- Notification Bar at the top -->
+    <!--<RelativeLayout
+        android:id="@+id/notification_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageView
+            android:id="@+id/notification_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/_notification_icon"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:id="@+id/notification_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/notification_icon"/>
+    </RelativeLayout>-->
+
+    <!-- Content layout - Wrapped in a ScrollView for scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="@color/pageBackgroundColor">
+
+            <!-- Toolbar Section -->
+            <!--<androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:elevation="4dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:title="User Dashboard"
+                app:titleTextColor="@android:color/white"/>-->
+            <!-- Toolbar Section -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@drawable/toolbar_background"
+                android:elevation="4dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:title="User Dashboard"
+                app:titleTextColor="@android:color/white">
+
+                <!-- Container for the notification icon and count -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="end|center_vertical"
+                    android:layout_gravity="end"
+                    android:paddingEnd="16dp"> <!-- Add padding to the end -->
+
+                    <!-- Notification Icon -->
+                    <ImageView
+                        android:id="@+id/toolbar_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/_notification_icon"
+                        android:contentDescription="Toolbar Icon"
+                        android:layout_marginEnd="8dp"/>
+
+                    <!-- Notification Count
+                    <TextView
+                        android:id="@+id/notification_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:layout_gravity="center_vertical"/>-->
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+
+
+
+            <!-- Profile Section -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/cardBackgroundColor">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/profileImage"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="Profile Image"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="16dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/user_image"
+                        android:background="@drawable/profile_image_background"/>
+
+                    <TextView
+                        android:id="@+id/textProfileName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textColor="@color/profileTextColor"
+                        android:text="John Doe"/>
+
+                    <TextView
+                        android:id="@+id/textViewEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/profileTextColor"
+                        android:text="johndoe@email.com"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/buttonEditProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    app:cardBackgroundColor="@color/buttonColorEditProfilee"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="   Edit Profile   "
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- Quick Action Buttons Section using CardViews for a cleaner look -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:gravity="center_horizontal"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@mipmap/check_balance"
+                            android:contentDescription="View Balance Icon"/>
+
+                        <TextView
+                            android:id="@+id/textViewBalance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View Balance"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="16sp"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/bank_acc"
+                            android:contentDescription="View Transactions Icon"/>
+
+                        <TextView
+                            android:id="@+id/textViewTransactions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Transactions"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="16sp"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Deposit Money Option -->
+            <!--<com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/cardBackgroundColor">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/imageViewDepositMoney"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@mipmap/deposit_money"
+                        android:contentDescription="Deposit Money Icon"/>
+
+                    <TextView
+                        android:id="@+id/textViewDepositMoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Deposit Money"
+                        android:textSize="16sp"
+                        android:textColor="@color/textColorPrimary"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>-->
+
+            <!-- Notifications and Transfer Money Section -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/cardBackgroundColor">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:gravity="center_horizontal"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageViewDepositMoney"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@mipmap/deposit_money"
+                            android:contentDescription="Deposit Money Icon"/>
+
+                        <TextView
+                            android:id="@+id/textViewDepositMoney"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Deposit Money"
+                            android:textSize="16sp"
+                            android:textColor="@color/textColorPrimary"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@mipmap/send_money"
+                            android:contentDescription="Transfer Money Icon"/>
+
+                        <TextView
+                            android:id="@+id/textViewTransferMoney"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Transfer Money"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="16sp"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:gravity="center_horizontal"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@mipmap/cashsend"
+                            android:contentDescription="Send Cash Icon"/>
+
+                        <TextView
+                            android:id="@+id/textViewCashSend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Send Cash"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="16sp"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@mipmap/bankcard"
+                            android:contentDescription="View Cards Icon"/>
+
+                        <TextView
+                            android:id="@+id/textViewViewCards"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View Cards"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="16sp"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

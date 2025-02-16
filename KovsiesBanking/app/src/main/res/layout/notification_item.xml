@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    android:padding="12dp"
+    android:backgroundTint="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Notification Icon -->
+        <ImageView
+            android:id="@+id/notificationIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/notification_pic"
+            android:contentDescription="Notification Icon"
+            app:tint="@color/colorPrimary" />
+
+        <!-- Notification Details -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <!-- Notification Title -->
+            <TextView
+                android:id="@+id/notificationTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notification Title"
+                android:textSize="16sp"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold" />
+
+            <!-- Notification Message -->
+            <TextView
+                android:id="@+id/notificationMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This is a sample notification message."
+                android:textSize="14sp"
+                android:textColor="@color/textColorSecondary"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+        <!-- Notification Time -->
+        <TextView
+            android:id="@+id/notificationDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2h ago"
+            android:textSize="12sp"
+            android:textColor="@color/textColorSecondary"
+            android:layout_marginStart="12dp" />
+
+        <TextView
+            android:id="@+id/notificationIsRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Is Read" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

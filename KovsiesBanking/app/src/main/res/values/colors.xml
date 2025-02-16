@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="accent">#03DAC5</color>
+    <color name="success">#4CAF61</color>
+    <color name="background_color">#0A3D62</color> <!-- Example color, adjust as needed -->
+    <color name="primaryColor">#1ABC9C</color> <!-- Example green for accents -->
+    <color name="pageBackgroundColor">#F5F5F5</color> <!-- Light gray background color for the page -->
+    <color name="cardBackgroundColor">#FFFFFF</color> <!-- White background for cards -->
+    <color name="profileImageBorderColor">#E0E0E0</color> <!-- Light gray border around profile image -->
+    <color name="profileTextColor">#333333</color> <!-- Dark gray for text, especially profile section -->
+    <color name="buttonColorEditProfile">#FF9800</color> <!-- Orange color for "Edit Profile" button -->
+    <color name="buttonColorViewBalance">#4CAF50</color> <!-- Green color for "View Balance" button -->
+    <color name="buttonColorTransactions">#2196F3</color> <!-- Blue color for "Transactions" button -->
+    <color name="buttonColorNotifications">#673AB7</color> <!-- Purple color for "Notifications" button -->
+    <color name="buttonColorTransferMoney">#F44336</color> <!-- Red color for "Transfer Money" button -->
+    <color name="buttonColorBookSession">#3F51B5</color> <!-- Darker blue color for "Book Session" button -->
+    <color name="lightGray">#D3D3D3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="backgroundColor">#F3F4F6</color>
+    <color name="textColorPrimary">#333333</color>
+    <color name="textColorSecondary">#888888</color>
+    <color name="colorPrimary">#03A9F4</color>
+    <color name="input_background">#FFFFFF</color>
+    <color name="input_stroke_color">#DDDDDD</color>
+    <color name="buttonTextColor">#FFFFFF</color>
+    <color name="linkColor">#0288D1</color>
+    <color name="errorColor">#D32F2F</color>
+    <color name="light_background">#F4F4F9</color>
+    <color name="primary_text">#333333</color>
+    <color name="secondary_text">#777777</color>
+    <color name="divider_color">#E0E0E0</color>
+    <color name="cardBackground">#F5F5F5</color>
+    <color name="background_light">#E0E0E0</color>
+    <color name="buttonColorStart">#FF4081</color>
+    <color name="buttonColorEnd">#FF9800</color>
+    <color name="colorStart">#2196F3</color> <!-- Light Blue -->
+    <color name="colorEnd">#1976D2</color> <!-- Dark Blue -->
+    <color name="buttonColorEditProfilee">#333333</color> <!-- Default Red -->
+    <color name="buttonColorEditProfilePressed">#D32F2F</color> <!-- Darker Red for Pressed State -->
+
+
+    <color name="light_red">#FFCCCC</color> <!-- Light Red -->
+    <color name="dark_red">#FF0000</color> <!-- Dark Red -->
+    <!-- Bottom Navigation Colors -->
+    <color name="bottom_nav_color">#000000</color>
+
+    <!-- White (used for button text) -->
+ </resources>

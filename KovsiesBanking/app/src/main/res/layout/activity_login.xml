@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/student_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/ufs_logo_"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/welcome_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back!"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/student_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/login_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login to your account"
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_below="@id/welcome_back"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/student_number_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student/Staff Number"
+        android:textSize="18sp"
+        android:layout_below="@id/login_subtitle"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/student_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/student_number_label"
+        android:hint="Enter Student/Staff Number"
+        android:padding="10dp"
+        android:background="@android:drawable/editbox_background"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/password_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textSize="18sp"
+        android:layout_below="@id/student_number"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Enter Password"
+        android:background="@android:drawable/editbox_background"
+        android:layout_below="@id/password_label"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_below="@id/password"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/register_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account? Register"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_below="@id/login_button"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

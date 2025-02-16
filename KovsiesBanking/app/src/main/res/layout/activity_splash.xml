@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <ImageView
+        android:id="@+id/splash_logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/ufs_logo_"
+        android:contentDescription="@string/app_name"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/splash_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/splash_logo"
+        android:layout_centerHorizontal="true"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/splash_tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/splash_app_name"
+        android:layout_centerHorizontal="true"
+        android:text="Secure, Convenient Banking"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp" />
+
+    <ProgressBar
+        android:id="@+id/splash_loading"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/splash_tagline"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:indeterminate="true"
+        android:visibility="visible" />
+
+</RelativeLayout>
